@@ -7,6 +7,7 @@ export default function Login({ setToken }) {
   const [isSignup, setIsSignup] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -48,14 +49,22 @@ export default function Login({ setToken }) {
               autoFocus
             />
           </div>
-          <div className="input-group">
+          <div className="input-group password-group">
             <input
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               value={password}
               onChange={e => setPassword(e.target.value)}
               required
               placeholder="Password"
             />
+            <button
+              type="button"
+              className="show-password-btn"
+              onClick={() => setShowPassword(!showPassword)}
+              aria-label={showPassword ? 'Hide password' : 'Show password'}
+            >
+              {showPassword ? 'Hide' : 'Show'}
+            </button>
           </div>
           {error && <div className="error-msg">{error}</div>}
           {success && <div className="success-msg">{success}</div>}
