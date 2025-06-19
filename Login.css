@@ -1,0 +1,118 @@
+.login-bg {
+  min-height: 100vh;
+  padding:0rem 35rem;
+  background: linear-gradient(120deg, #282c34 0%, #4e54c8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  background: #fff;
+  padding: 2.5rem 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  animation: fadeIn 0.8s;
+}
+h1 {
+  padding-left:100px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4e54c8;
+  margin-bottom: 1.5rem;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 1rem 1rem;
+  border: 1.5px solid #4e54c8;
+  border-radius: 0.7rem;
+  background: #f5f6fa;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+.input-group input:focus {
+  border: 2px solid #282c34;
+  outline: none;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.8rem 0;
+  background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+}
+
+.login-btn:hover {
+  background: linear-gradient(90deg, #282c34 0%, #4e54c8 100%);
+}
+
+.toggle-link {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #4e54c8;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.toggle-btn:hover {
+  color: #282c34;
+}
+
+.error-msg {
+  color: #e74c3c;
+  background: #ffeaea;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: -0.5rem;
+  text-align: center;
+  font-size: 0.97rem;
+}
+
+.success-msg {
+  color: #27ae60;
+  background: #eafaf1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: -0.5rem;
+  text-align: center;
+  font-size: 0.97rem;
+}
