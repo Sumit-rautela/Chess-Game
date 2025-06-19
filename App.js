@@ -1,9 +1,10 @@
 localStorage.removeItem('token');
 import React, { useState } from "react";
 import Login from './Login';
-import ChessGame from './ChessGame'; // Move your chess logic here
+import ChessGame from './ChessGame';
 
-function App() {
+// Add props parameter to receive stockfishInitializer
+function App({ stockfishInitializer }) {
   const [token, setToken] = useState(localStorage.getItem('token'));
 
   const handleSetToken = (token) => {
@@ -15,7 +16,8 @@ function App() {
     return <Login setToken={handleSetToken} />;
   }
 
-  return <ChessGame />;
+  // Pass stockfishInitializer to ChessGame
+  return <ChessGame stockfishInitializer={stockfishInitializer} />;
 }
 
 export default App;
