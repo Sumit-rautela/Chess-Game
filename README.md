@@ -21,7 +21,6 @@ CHESS-GAME/
 │   ├── package-lock.json
 │   ├── package.json
 │   ├── server.js
-│   ├── tailwind.config.js
 │   └── users.json
 │
 ├── frontend/
